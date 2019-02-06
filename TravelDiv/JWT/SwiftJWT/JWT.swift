@@ -6,34 +6,6 @@
 //
 
 import Foundation
-//public struct JWT : Codable {
-//
-//    /// The JWT header.
-//    public var header: Header = Header()
-//    /// The JWT claims
-//    public var claims: Claims = Claims()
-//
-//    public init(header: Header = Header(), claims: Claims) {
-//        self.header = header
-//        self.claims = claims
-//    }
-//
-//    public init(from decoder: Decoder) throws {
-//    }
-//
-//    public func encode(to encoder: Encoder) throws {
-//    }
-//
-//    public mutating func sign(using jwtSigner: JWTSigner) throws -> String {
-//        var tempHeader = header
-//        tempHeader.alg = jwtSigner.name
-//        let headerString = try tempHeader.encode()
-//        let claimsString = try claims.encode()
-//        header.alg = tempHeader.alg
-//        return try jwtSigner.sign(header: headerString, claims: claimsString)
-//    }
-//}
-
 
 public struct JWT<Payload> where Payload: Codable {
     /// The headers linked to this message

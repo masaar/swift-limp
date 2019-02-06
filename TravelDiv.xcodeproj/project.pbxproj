@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C730F7BB220B2249006C18DB /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C730F7BA220B2249006C18DB /* AnyCodable.swift */; };
 		C746A1872203514D00B01EF5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A17A2203514C00B01EF5 /* Status.swift */; };
 		C746A1892203514D00B01EF5 /* SignerAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A17C2203514C00B01EF5 /* SignerAlgorithm.swift */; };
 		C746A18A2203514D00B01EF5 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A17D2203514C00B01EF5 /* JWT.swift */; };
@@ -17,6 +18,8 @@
 		C746A1912203514D00B01EF5 /* JWTSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A1842203514D00B01EF5 /* JWTSigner.swift */; };
 		C746A1922203514D00B01EF5 /* BlueHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A1852203514D00B01EF5 /* BlueHMAC.swift */; };
 		C77D222A2205A72F0088B80A /* ExtensionTrevelDiv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D22292205A72F0088B80A /* ExtensionTrevelDiv.swift */; };
+		C784C66A220B265000B7F70E /* TravelFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C669220B265000B7F70E /* TravelFile.swift */; };
+		C784C67B220B36D800B7F70E /* CallArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C67A220B36D800B7F70E /* CallArguments.swift */; };
 		C7D7961F2201FE1200A3D049 /* TravelDiv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7961E2201FE1200A3D049 /* TravelDiv.swift */; };
 		C7D796232201FE2F00A3D049 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D796212201FE2F00A3D049 /* SSLSecurity.swift */; };
 		C7D796242201FE2F00A3D049 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D796222201FE2F00A3D049 /* WebSocket.swift */; };
@@ -24,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C730F7BA220B2249006C18DB /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
 		C746A17A2203514C00B01EF5 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		C746A17C2203514C00B01EF5 /* SignerAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignerAlgorithm.swift; sourceTree = "<group>"; };
 		C746A17D2203514C00B01EF5 /* JWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		C746A1842203514D00B01EF5 /* JWTSigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTSigner.swift; sourceTree = "<group>"; };
 		C746A1852203514D00B01EF5 /* BlueHMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueHMAC.swift; sourceTree = "<group>"; };
 		C77D22292205A72F0088B80A /* ExtensionTrevelDiv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTrevelDiv.swift; sourceTree = "<group>"; };
+		C784C669220B265000B7F70E /* TravelFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFile.swift; sourceTree = "<group>"; };
+		C784C67A220B36D800B7F70E /* CallArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallArguments.swift; sourceTree = "<group>"; };
 		C7D796132201FDFD00A3D049 /* TravelDiv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TravelDiv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D796172201FDFD00A3D049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D7961E2201FE1200A3D049 /* TravelDiv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDiv.swift; sourceTree = "<group>"; };
@@ -87,9 +93,11 @@
 				C7D796252201FE3A00A3D049 /* JWT */,
 				C7D796202201FE2F00A3D049 /* WebSocket */,
 				C7D796E62201FFFF00A3D049 /* TravelDivHeader.h */,
-				C7D796172201FDFD00A3D049 /* Info.plist */,
 				C7D7961E2201FE1200A3D049 /* TravelDiv.swift */,
 				C77D22292205A72F0088B80A /* ExtensionTrevelDiv.swift */,
+				C784C67A220B36D800B7F70E /* CallArguments.swift */,
+				C784C669220B265000B7F70E /* TravelFile.swift */,
+				C7D796172201FDFD00A3D049 /* Info.plist */,
 			);
 			path = TravelDiv;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 				C746A1812203514C00B01EF5 /* JWTError.swift */,
 				C746A17D2203514C00B01EF5 /* JWT.swift */,
 				C746A17E2203514C00B01EF5 /* Header.swift */,
+				C730F7BA220B2249006C18DB /* AnyCodable.swift */,
 			);
 			path = SwiftJWT;
 			sourceTree = "<group>";
@@ -202,9 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C784C67B220B36D800B7F70E /* CallArguments.swift in Sources */,
 				C746A18E2203514D00B01EF5 /* JWTError.swift in Sources */,
+				C730F7BB220B2249006C18DB /* AnyCodable.swift in Sources */,
 				C7D796232201FE2F00A3D049 /* SSLSecurity.swift in Sources */,
 				C746A18B2203514D00B01EF5 /* Header.swift in Sources */,
+				C784C66A220B265000B7F70E /* TravelFile.swift in Sources */,
 				C746A1912203514D00B01EF5 /* JWTSigner.swift in Sources */,
 				C746A18A2203514D00B01EF5 /* JWT.swift in Sources */,
 				C746A1872203514D00B01EF5 /* Status.swift in Sources */,

@@ -7,16 +7,6 @@
 
 import UIKit
 
-
-//public enum EndPoints:String {
-//    case countryRead = "country/read"
-//    case mapRead = "map/read"
-//    case pointRead = "point/read"
-//    case auth = "session/auth"
-//    case reauth = "session/reauth"
-//    case signOut = "session/signout"
-//}
-
 public enum CredentialType:String {
     case username
     case email
@@ -38,10 +28,9 @@ public struct SocketResponse {
     var status: Int?
 }
 
-public struct Doc {
-    let _id: String?
-    let key : String
-    let value : Any?
+public protocol TravelDivDelegate: class {
+    func didDisconnect(_ result: Bool, error:Error?)
+    func didReceive(_ result:Bool, response:SocketResponse)
 }
 
 open class TravelDiv: NSObject {
@@ -51,7 +40,9 @@ open class TravelDiv: NSObject {
         return _shared
     }
     var authed = false
-    var session:Any? = nil
+    var session: Any? = nil
+    public var delegate: TravelDivDelegate?
+//    delegate?.changeBackgroundColor(tapGesture.view?.backgroundColor)
     
     let header = Header(alg: "HS256", typ: "JWT")
     var socket = WebSocket(url: URL(string: "ws://api-points.masaar.com/ws")!) // Dev server
@@ -60,6 +51,7 @@ open class TravelDiv: NSObject {
     private func setListener(listener: @escaping (Bool, SocketResponse) -> ()) {
         socket.onDisconnect = { (error: Error?) in
             // TODO: Handle error internally
+            self.delegate?.didDisconnect(false, error: error)
             listener(false, SocketResponse(args: nil, msg: nil, status: nil))
         }
         socket.onText = { (text: String) in
@@ -77,10 +69,14 @@ open class TravelDiv: NSObject {
                     let postal_code = arg?["postal_code"] as? String
                     
                     let args = ResponseArguments(call_id:call_id, docs: docs, count: count, total: total, groups: groups, code: postal_code)
-                    listener(true, SocketResponse(args: args, msg: msg, status: status))
+                    let response = SocketResponse(args: args, msg: msg, status: status)
+                    self.delegate?.didReceive(true, response: response)
+                    listener(true, response)
                     
                 }else{
-                    listener(true, SocketResponse(args: nil, msg: nil, status: nil))
+                    let response = SocketResponse(args: nil, msg: nil, status: nil)
+                    self.delegate?.didReceive(true, response: response)
+                    listener(true, response)
                 }
             })
         }
@@ -96,6 +92,11 @@ open class TravelDiv: NSObject {
         }
         socket.connect()
     }
+    
+    open func isAuthed() -> Any? {
+        return session
+    }
+    
     func generateAuthHash(authVar: CredentialType, authVal: String, password: String) throws -> String {
         var authJWT = JWT(header: header, payload: ["hash":[authVar.rawValue, authVal, password]])
         let token = JWTSigner.hs256(key: password.data(using: .utf8)!)
@@ -103,6 +104,7 @@ open class TravelDiv: NSObject {
         let smallHash = hash.components(separatedBy: ".")[1]
         return smallHash
     }
+    
     open func auth(authVar:CredentialType, authVal:String, password:String, completion: @escaping (Bool, SocketResponse) -> ()){
         do {
             let hash = try generateAuthHash(authVar: authVar, authVal: authVal, password: password)
@@ -125,18 +127,16 @@ open class TravelDiv: NSObject {
                 self.cacheValue(key: "sid", value: sid)
                 completion(success, response)
             }
-            
         } catch {
             //handle error
             print(error)
             completion(false, SocketResponse(args: nil, msg: error.localizedDescription, status: nil))
         }
     }
+    
     open func reauth(completion: @escaping (Bool, SocketResponse) -> ()){
-        
         let cacheToken:String = self.getCachedValue(key: "token") ?? "__ANON"
         let cacheSid:String = self.getCachedValue(key: "sid") ?? "f00000000000000000000012"
-       
         do{
             var authJWT = JWT(header: header, payload: ["token":cacheToken])
             let token = JWTSigner.hs256(key: cacheToken.data(using: .utf8)!)
@@ -150,8 +150,6 @@ open class TravelDiv: NSObject {
             call(callArgs: json) { (success, response) in
                 completion(success, response)
             }
-            
-            
         }catch{
             completion(false, SocketResponse(args: nil, msg: error.localizedDescription, status: nil))
         }
