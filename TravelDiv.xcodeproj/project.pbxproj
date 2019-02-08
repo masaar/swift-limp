@@ -24,6 +24,7 @@
 		C7D796232201FE2F00A3D049 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D796212201FE2F00A3D049 /* SSLSecurity.swift */; };
 		C7D796242201FE2F00A3D049 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D796222201FE2F00A3D049 /* WebSocket.swift */; };
 		C7D796E92202002500A3D049 /* TravelDivHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D796E62201FFFF00A3D049 /* TravelDivHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D494D12E220DBAF500A47CFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494D12D220DBAF500A47CFE /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C7D796212201FE2F00A3D049 /* SSLSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLSecurity.swift; sourceTree = "<group>"; };
 		C7D796222201FE2F00A3D049 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		C7D796E62201FFFF00A3D049 /* TravelDivHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelDivHeader.h; sourceTree = "<group>"; };
+		D494D12D220DBAF500A47CFE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		C7D796152201FDFD00A3D049 /* TravelDiv */ = {
 			isa = PBXGroup;
 			children = (
+				D494D12C220DBAB800A47CFE /* Reachability */,
 				C7D796252201FE3A00A3D049 /* JWT */,
 				C7D796202201FE2F00A3D049 /* WebSocket */,
 				C7D796E62201FFFF00A3D049 /* TravelDivHeader.h */,
@@ -130,6 +133,14 @@
 				C730F7BA220B2249006C18DB /* AnyCodable.swift */,
 			);
 			path = SwiftJWT;
+			sourceTree = "<group>";
+		};
+		D494D12C220DBAB800A47CFE /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				D494D12D220DBAF500A47CFE /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				C7D796232201FE2F00A3D049 /* SSLSecurity.swift in Sources */,
 				C746A18B2203514D00B01EF5 /* Header.swift in Sources */,
 				C784C66A220B265000B7F70E /* TravelFile.swift in Sources */,
+				D494D12E220DBAF500A47CFE /* Reachability.swift in Sources */,
 				C746A1912203514D00B01EF5 /* JWTSigner.swift in Sources */,
 				C746A18A2203514D00B01EF5 /* JWT.swift in Sources */,
 				C746A1872203514D00B01EF5 /* Status.swift in Sources */,

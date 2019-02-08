@@ -44,6 +44,7 @@ open class TravelDiv: NSObject {
     open class func API() -> TravelDiv {
         return _shared
     }
+   
     public var delegate: TravelDivDelegate?
 //    delegate?.changeBackgroundColor(tapGesture.view?.backgroundColor)
     
@@ -51,6 +52,7 @@ open class TravelDiv: NSObject {
     var session: Any? = nil
     let header = Header(alg: "HS256", typ: "JWT")
     var socket = WebSocket(url: URL(string: TravelEnvironment.API_URL)! )
+    var reachability: Reachability!
 //    var socket = WebSocket(url: URL(string: "wss://api-maps.traveldiv.net/ws")!) // Prod server
     
     private func setListener(listener: @escaping (Bool, SocketResponse) -> ()) {
@@ -60,7 +62,6 @@ open class TravelDiv: NSObject {
             listener(false, SocketResponse(args: nil, msg: nil, status: nil))
         }
         socket.onText = { (text: String) in
-            
             self.convertStringToJson(text: text, completion: { (json) in
                 if let jsonValue = json {
                     let status = jsonValue["status"] as? Int
@@ -95,8 +96,28 @@ open class TravelDiv: NSObject {
         setListener { (success, response) in
             completion(success, response)
         }
-        socket.connect()
+        checkInternetStatus()
     }
+    private func checkInternetStatus()
+    {
+        reachability = Reachability()!
+        NotificationCenter.default.addObserver(
+            self,selector: #selector(networkStatusChanged(_:)),name: .reachabilityChanged,object: reachability)
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    @objc func networkStatusChanged(_ notification: Notification) {
+        if reachability.connection != .none {
+            if !socket.isConnected {
+                socket.connect()
+            }
+        }
+        
+    }
+
     
     open func isAuthed() -> Any? {
         return session
