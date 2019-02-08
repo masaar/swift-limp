@@ -14,16 +14,16 @@ public enum CredentialType:String {
 }
 
 public struct ResponseArguments {
-    var call_id : String?
-    var docs : [Any]?
-    var count : Int?
-    var total : Int?
-    var groups : Any?
-    var code : String?
+   public var call_id : String?
+   public var docs : [Any]?
+   public var count : Int?
+   public var total : Int?
+   public var groups : Any?
+   public var code : String?
 }
 
 public struct SocketResponse {
-    var args: ResponseArguments?
+    public var args: ResponseArguments?
     var msg: String?
     var status: Int?
 }
@@ -33,19 +33,24 @@ public protocol TravelDivDelegate: class {
     func didReceive(_ result:Bool, response:SocketResponse)
 }
 
+open class TravelEnvironment {
+    public static var nonToken = "__ANON"
+    public static var API_URL = "wss://api-maps.traveldiv.net/ws"
+}
+
 open class TravelDiv: NSObject {
     
     static fileprivate let _shared = TravelDiv()
     open class func API() -> TravelDiv {
         return _shared
     }
-    var authed = false
-    var session: Any? = nil
     public var delegate: TravelDivDelegate?
 //    delegate?.changeBackgroundColor(tapGesture.view?.backgroundColor)
     
+    var authed = false
+    var session: Any? = nil
     let header = Header(alg: "HS256", typ: "JWT")
-    var socket = WebSocket(url: URL(string: "ws://api-points.masaar.com/ws")!) // Dev server
+    var socket = WebSocket(url: URL(string: TravelEnvironment.API_URL)! )
 //    var socket = WebSocket(url: URL(string: "wss://api-maps.traveldiv.net/ws")!) // Prod server
     
     private func setListener(listener: @escaping (Bool, SocketResponse) -> ()) {
@@ -55,6 +60,7 @@ open class TravelDiv: NSObject {
             listener(false, SocketResponse(args: nil, msg: nil, status: nil))
         }
         socket.onText = { (text: String) in
+            
             self.convertStringToJson(text: text, completion: { (json) in
                 if let jsonValue = json {
                     let status = jsonValue["status"] as? Int
@@ -67,7 +73,6 @@ open class TravelDiv: NSObject {
                     let total = arg?["total"] as? Int
                     let groups = arg?["groups"]
                     let postal_code = arg?["postal_code"] as? String
-                    
                     let args = ResponseArguments(call_id:call_id, docs: docs, count: count, total: total, groups: groups, code: postal_code)
                     let response = SocketResponse(args: args, msg: msg, status: status)
                     self.delegate?.didReceive(true, response: response)
@@ -135,7 +140,7 @@ open class TravelDiv: NSObject {
     }
     
     open func reauth(completion: @escaping (Bool, SocketResponse) -> ()){
-        let cacheToken:String = self.getCachedValue(key: "token") ?? "__ANON"
+        let cacheToken:String = self.getCachedValue(key: "token") ?? TravelEnvironment.nonToken
         let cacheSid:String = self.getCachedValue(key: "sid") ?? "f00000000000000000000012"
         do{
             var authJWT = JWT(header: header, payload: ["token":cacheToken])
