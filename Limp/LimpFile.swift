@@ -1,12 +1,12 @@
 //
-//  TravelFile.swift
-//  TravelDiv
+//  LimpFile.swift
+//  Limp
 //
 //
 
 import Foundation
 
-class TravelFile: Codable {
+class LimpFile: Codable {
     
     var name:String? = ""
     var size:UInt64? = 0

@@ -1,6 +1,6 @@
 //
-//  TravelDiv.swift
-//  TravelDiv
+//  Limp.swift
+//  Limp
 //
 //  Created by Usman Mughal on 30/01/2019.
 //
@@ -28,30 +28,30 @@ public struct SocketResponse {
     var status: Int?
 }
 
-public protocol TravelDivDelegate: class {
+public protocol LimpDelegate: class {
     func didDisconnect(_ result: Bool, error:Error?)
     func didReceive(_ result:Bool, response:SocketResponse)
 }
 
-open class TravelEnvironment {
+open class LimpEnvironment {
     public static var nonToken = "__ANON"
     public static var API_URL = "wss://api-maps.traveldiv.net/ws"
 }
 
-open class TravelDiv: NSObject {
+open class Limp: NSObject {
     
-    static fileprivate let _shared = TravelDiv()
-    open class func API() -> TravelDiv {
+    static fileprivate let _shared = Limp()
+    open class func API() -> Limp {
         return _shared
     }
    
-    public var delegate: TravelDivDelegate?
+    public var delegate: LimpDelegate?
 //    delegate?.changeBackgroundColor(tapGesture.view?.backgroundColor)
     
     var authed = false
     var session: Any? = nil
     let header = Header(alg: "HS256", typ: "JWT")
-    var socket = WebSocket(url: URL(string: TravelEnvironment.API_URL)! )
+    var socket = WebSocket(url: URL(string: LimpEnvironment.API_URL)! )
     var reachability: Reachability!
 //    var socket = WebSocket(url: URL(string: "wss://api-maps.traveldiv.net/ws")!) // Prod server
     
@@ -161,7 +161,7 @@ open class TravelDiv: NSObject {
     }
     
     open func reauth(completion: @escaping (Bool, SocketResponse) -> ()){
-        let cacheToken:String = self.getCachedValue(key: "token") ?? TravelEnvironment.nonToken
+        let cacheToken:String = self.getCachedValue(key: "token") ?? LimpEnvironment.nonToken
         let cacheSid:String = self.getCachedValue(key: "sid") ?? "f00000000000000000000012"
         do{
             var authJWT = JWT(header: header, payload: ["token":cacheToken])

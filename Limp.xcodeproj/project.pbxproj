@@ -17,13 +17,13 @@
 		C746A18F2203514D00B01EF5 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A1822203514C00B01EF5 /* Updatable.swift */; };
 		C746A1912203514D00B01EF5 /* JWTSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A1842203514D00B01EF5 /* JWTSigner.swift */; };
 		C746A1922203514D00B01EF5 /* BlueHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C746A1852203514D00B01EF5 /* BlueHMAC.swift */; };
-		C77D222A2205A72F0088B80A /* ExtensionTrevelDiv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D22292205A72F0088B80A /* ExtensionTrevelDiv.swift */; };
-		C784C66A220B265000B7F70E /* TravelFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C669220B265000B7F70E /* TravelFile.swift */; };
+		C77D222A2205A72F0088B80A /* ExtensionLimp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D22292205A72F0088B80A /* ExtensionLimp.swift */; };
+		C784C66A220B265000B7F70E /* LimpFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C669220B265000B7F70E /* LimpFile.swift */; };
 		C784C67B220B36D800B7F70E /* CallArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784C67A220B36D800B7F70E /* CallArguments.swift */; };
-		C7D7961F2201FE1200A3D049 /* TravelDiv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7961E2201FE1200A3D049 /* TravelDiv.swift */; };
+		C7D7961F2201FE1200A3D049 /* Limp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D7961E2201FE1200A3D049 /* Limp.swift */; };
 		C7D796232201FE2F00A3D049 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D796212201FE2F00A3D049 /* SSLSecurity.swift */; };
 		C7D796242201FE2F00A3D049 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D796222201FE2F00A3D049 /* WebSocket.swift */; };
-		C7D796E92202002500A3D049 /* TravelDivHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D796E62201FFFF00A3D049 /* TravelDivHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7D796E92202002500A3D049 /* LimpHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D796E62201FFFF00A3D049 /* LimpHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D494D12E220DBAF500A47CFE /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494D12D220DBAF500A47CFE /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,15 +38,15 @@
 		C746A1822203514C00B01EF5 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		C746A1842203514D00B01EF5 /* JWTSigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTSigner.swift; sourceTree = "<group>"; };
 		C746A1852203514D00B01EF5 /* BlueHMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueHMAC.swift; sourceTree = "<group>"; };
-		C77D22292205A72F0088B80A /* ExtensionTrevelDiv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTrevelDiv.swift; sourceTree = "<group>"; };
-		C784C669220B265000B7F70E /* TravelFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFile.swift; sourceTree = "<group>"; };
+		C77D22292205A72F0088B80A /* ExtensionLimp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionLimp.swift; sourceTree = "<group>"; };
+		C784C669220B265000B7F70E /* LimpFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimpFile.swift; sourceTree = "<group>"; };
 		C784C67A220B36D800B7F70E /* CallArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallArguments.swift; sourceTree = "<group>"; };
-		C7D796132201FDFD00A3D049 /* TravelDiv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TravelDiv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D796132201FDFD00A3D049 /* Limp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Limp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D796172201FDFD00A3D049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7D7961E2201FE1200A3D049 /* TravelDiv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDiv.swift; sourceTree = "<group>"; };
+		C7D7961E2201FE1200A3D049 /* Limp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Limp.swift; sourceTree = "<group>"; };
 		C7D796212201FE2F00A3D049 /* SSLSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLSecurity.swift; sourceTree = "<group>"; };
 		C7D796222201FE2F00A3D049 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
-		C7D796E62201FFFF00A3D049 /* TravelDivHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelDivHeader.h; sourceTree = "<group>"; };
+		C7D796E62201FFFF00A3D049 /* LimpHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimpHeader.h; sourceTree = "<group>"; };
 		D494D12D220DBAF500A47CFE /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,7 @@
 		C7D796092201FDFD00A3D049 = {
 			isa = PBXGroup;
 			children = (
-				C7D796152201FDFD00A3D049 /* TravelDiv */,
+				C7D796152201FDFD00A3D049 /* Limp */,
 				C7D796142201FDFD00A3D049 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,25 +84,25 @@
 		C7D796142201FDFD00A3D049 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7D796132201FDFD00A3D049 /* TravelDiv.framework */,
+				C7D796132201FDFD00A3D049 /* Limp.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C7D796152201FDFD00A3D049 /* TravelDiv */ = {
+		C7D796152201FDFD00A3D049 /* Limp */ = {
 			isa = PBXGroup;
 			children = (
 				D494D12C220DBAB800A47CFE /* Reachability */,
 				C7D796252201FE3A00A3D049 /* JWT */,
 				C7D796202201FE2F00A3D049 /* WebSocket */,
-				C7D796E62201FFFF00A3D049 /* TravelDivHeader.h */,
-				C7D7961E2201FE1200A3D049 /* TravelDiv.swift */,
-				C77D22292205A72F0088B80A /* ExtensionTrevelDiv.swift */,
+				C7D796E62201FFFF00A3D049 /* LimpHeader.h */,
+				C7D7961E2201FE1200A3D049 /* Limp.swift */,
+				C77D22292205A72F0088B80A /* ExtensionLimp.swift */,
 				C784C67A220B36D800B7F70E /* CallArguments.swift */,
-				C784C669220B265000B7F70E /* TravelFile.swift */,
+				C784C669220B265000B7F70E /* LimpFile.swift */,
 				C7D796172201FDFD00A3D049 /* Info.plist */,
 			);
-			path = TravelDiv;
+			path = Limp;
 			sourceTree = "<group>";
 		};
 		C7D796202201FE2F00A3D049 /* WebSocket */ = {
@@ -150,16 +150,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D796E92202002500A3D049 /* TravelDivHeader.h in Headers */,
+				C7D796E92202002500A3D049 /* LimpHeader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C7D796122201FDFD00A3D049 /* TravelDiv */ = {
+		C7D796122201FDFD00A3D049 /* Limp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C7D7961B2201FDFD00A3D049 /* Build configuration list for PBXNativeTarget "TravelDiv" */;
+			buildConfigurationList = C7D7961B2201FDFD00A3D049 /* Build configuration list for PBXNativeTarget "Limp" */;
 			buildPhases = (
 				C7D7960E2201FDFD00A3D049 /* Headers */,
 				C7D7960F2201FDFD00A3D049 /* Sources */,
@@ -170,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = TravelDiv;
+			name = Limp;
 			productName = TravelDiv;
-			productReference = C7D796132201FDFD00A3D049 /* TravelDiv.framework */;
+			productReference = C7D796132201FDFD00A3D049 /* Limp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C7D7960D2201FDFD00A3D049 /* Build configuration list for PBXProject "TravelDiv" */;
+			buildConfigurationList = C7D7960D2201FDFD00A3D049 /* Build configuration list for PBXProject "Limp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,7 +202,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C7D796122201FDFD00A3D049 /* TravelDiv */,
+				C7D796122201FDFD00A3D049 /* Limp */,
 			);
 		};
 /* End PBXProject section */
@@ -227,18 +227,18 @@
 				C730F7BB220B2249006C18DB /* AnyCodable.swift in Sources */,
 				C7D796232201FE2F00A3D049 /* SSLSecurity.swift in Sources */,
 				C746A18B2203514D00B01EF5 /* Header.swift in Sources */,
-				C784C66A220B265000B7F70E /* TravelFile.swift in Sources */,
+				C784C66A220B265000B7F70E /* LimpFile.swift in Sources */,
 				D494D12E220DBAF500A47CFE /* Reachability.swift in Sources */,
 				C746A1912203514D00B01EF5 /* JWTSigner.swift in Sources */,
 				C746A18A2203514D00B01EF5 /* JWT.swift in Sources */,
 				C746A1872203514D00B01EF5 /* Status.swift in Sources */,
-				C77D222A2205A72F0088B80A /* ExtensionTrevelDiv.swift in Sources */,
+				C77D222A2205A72F0088B80A /* ExtensionLimp.swift in Sources */,
 				C7D796242201FE2F00A3D049 /* WebSocket.swift in Sources */,
 				C746A18F2203514D00B01EF5 /* Updatable.swift in Sources */,
 				C746A1922203514D00B01EF5 /* BlueHMAC.swift in Sources */,
 				C746A18C2203514D00B01EF5 /* HMAC.swift in Sources */,
 				C746A1892203514D00B01EF5 /* SignerAlgorithm.swift in Sources */,
-				C7D7961F2201FE1200A3D049 /* TravelDiv.swift in Sources */,
+				C7D7961F2201FE1200A3D049 /* Limp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,11 +374,11 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RS8P44VNQC;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TravelDiv/Info.plist;
+				INFOPLIST_FILE = limp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +386,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobizion.TravelDiv;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masaar.limp;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -402,11 +402,11 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RS8P44VNQC;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TravelDiv/Info.plist;
+				INFOPLIST_FILE = limp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,7 +414,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobizion.TravelDiv;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masaar.limp;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -425,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C7D7960D2201FDFD00A3D049 /* Build configuration list for PBXProject "TravelDiv" */ = {
+		C7D7960D2201FDFD00A3D049 /* Build configuration list for PBXProject "Limp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C7D796192201FDFD00A3D049 /* Debug */,
@@ -434,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C7D7961B2201FDFD00A3D049 /* Build configuration list for PBXNativeTarget "TravelDiv" */ = {
+		C7D7961B2201FDFD00A3D049 /* Build configuration list for PBXNativeTarget "Limp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C7D7961C2201FDFD00A3D049 /* Debug */,

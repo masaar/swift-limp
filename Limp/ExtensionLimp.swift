@@ -1,13 +1,13 @@
 //
-//  ExtensionTrevelDiv.swift
-//  TravelDiv
+//  ExtensionLimp.swift
+//  Limp
 //
 //  Created by Usman Mughal on 02/02/2019.
 //
 
 import Foundation
 
-extension TravelDiv {
+extension Limp {
     func jsonToData(json: AnyObject) -> Data? {
         return try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
     }
@@ -24,7 +24,7 @@ extension TravelDiv {
         }
     }
 }
-extension TravelDiv {
+extension Limp {
     func cacheValue(key:String, value:String?){
         UserDefaults.standard.set(value, forKey: key)
     }
@@ -37,10 +37,10 @@ extension TravelDiv {
     }
 }
 
-extension TravelDiv {
+extension Limp {
     open func createTravelFile(_ path: String) -> [String: Any]? {
         do {
-            return try TravelFile(filePath: path).getDocObject()
+            return try LimpFile(filePath: path).getDocObject()
         } catch {
             print("createTravelFile: ", error.localizedDescription)
             return nil
