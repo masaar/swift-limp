@@ -29,13 +29,13 @@ public struct SocketResponse {
 }
 
 public protocol LimpDelegate: class {
-    func didDisconnect(_ result: Bool, error:Error?)
+    func didDisconnect(error:Error?)
     func didReceive(_ result:Bool, response:SocketResponse)
 }
 
 open class LimpEnvironment {
-    public static var nonToken = "__ANON"
-    public static var API_URL = "wss://api-maps.traveldiv.net/ws"
+    public static var nonToken = "__ANONYMOUS_SECRET_TOKEN_f00000000000000000000012"
+    public static var API_URL = "ws://api-points.masaar.com/ws"
 }
 
 open class Limp: NSObject {
@@ -44,29 +44,24 @@ open class Limp: NSObject {
     open class func API() -> Limp {
         return _shared
     }
-   
     public var delegate: LimpDelegate?
-//    delegate?.changeBackgroundColor(tapGesture.view?.backgroundColor)
-    
     var authed = false
     var session: Any? = nil
+    var nonToken: String?
     let header = Header(alg: "HS256", typ: "JWT")
-    var socket = WebSocket(url: URL(string: LimpEnvironment.API_URL)! )
+    var socket : WebSocket?
     var reachability: Reachability!
-//    var socket = WebSocket(url: URL(string: "wss://api-maps.traveldiv.net/ws")!) // Prod server
-    
     private func setListener(listener: @escaping (Bool, SocketResponse) -> ()) {
-        socket.onDisconnect = { (error: Error?) in
+        socket?.onDisconnect = { (error: Error?) in
             // TODO: Handle error internally
-            self.delegate?.didDisconnect(false, error: error)
+            self.delegate?.didDisconnect(error: error)
             listener(false, SocketResponse(args: nil, msg: nil, status: nil))
         }
-        socket.onText = { (text: String) in
+        socket?.onText = { (text: String) in
             self.convertStringToJson(text: text, completion: { (json) in
                 if let jsonValue = json {
                     let status = jsonValue["status"] as? Int
                     let msg = jsonValue["msg"] as? String
-                    
                     let arg = jsonValue["args"] as? [String:Any]
                     let call_id = arg?["call_id"] as? String
                     let docs = arg?["docs"] as? [Any]
@@ -86,13 +81,15 @@ open class Limp: NSObject {
                 }
             })
         }
-        socket.onData = { (data: Data) in
+        socket?.onData = { (data: Data) in
             // TODO: handle data response
             // listener(true, SocketResponse(args: args, msg: msg, status: status)
         }
     }
     
-    open func initilize(completion: @escaping (Bool, SocketResponse) -> ()) {
+    open func initilize(_ API_URL:String,nonToken:String,completion: @escaping (Bool, SocketResponse) -> ()) {
+        self.nonToken = nonToken
+        socket = WebSocket(url: URL(string: API_URL)! )
         setListener { (success, response) in
             completion(success, response)
         }
@@ -111,9 +108,12 @@ open class Limp: NSObject {
     }
     @objc func networkStatusChanged(_ notification: Notification) {
         if reachability.connection != .none {
-            if !socket.isConnected {
-                socket.connect()
+            if let connectionStatus = socket?.isConnected{
+                if !connectionStatus {
+                    socket?.connect()
+                }
             }
+            
         }
         
     }
@@ -161,7 +161,7 @@ open class Limp: NSObject {
     }
     
     open func reauth(completion: @escaping (Bool, SocketResponse) -> ()){
-        let cacheToken:String = self.getCachedValue(key: "token") ?? LimpEnvironment.nonToken
+        let cacheToken:String = self.getCachedValue(key: "token") ?? nonToken ?? ""
         let cacheSid:String = self.getCachedValue(key: "sid") ?? "f00000000000000000000012"
         do{
             var authJWT = JWT(header: header, payload: ["token":cacheToken])
@@ -219,7 +219,7 @@ open class Limp: NSObject {
             }
             let json: [String: Any] = [ "token": finalHashAuth]
             let data = jsonToData(json: json as AnyObject)!
-            socket.write(dataTextFrame: data)
+            socket?.write(dataTextFrame: data)
         }catch{
             print(error.localizedDescription)
         }
