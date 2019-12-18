@@ -1,0 +1,6 @@
+module Pods_ns_limp_rxswift {
+  umbrella header "Pods-ns-limp-rxswift-umbrella.h"
+
+  export *
+  module * { export * }
+}
