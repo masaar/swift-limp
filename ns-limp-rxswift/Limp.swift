@@ -70,14 +70,14 @@ open class Limp: NSObject {
 //                 auth :  Array<(Subject: Array<Observable<Any>> , callArgs: CallArguments)>())
     
     var heartbeat = Observable<Int>.interval(.seconds(30), scheduler: MainScheduler.instance)
-    var appActive = true;
+    var appActive = true
     
-    var inited = false;
-    var inited$ = BehaviorSubject<Bool>(value: false)
+    var inited = false
+   public var inited$ = BehaviorSubject<Bool>(value: false)
     var session = ResponseArguments(r_Session:nil)
     
     var authed = false
-    var authed$ = BehaviorSubject<ResponseArguments>(value: ResponseArguments.init())
+   public var authed$ = BehaviorSubject<ResponseArguments>(value: ResponseArguments.init())
     var nonToken: String?
     let header = Header(alg: "HS256", typ: "JWT")
     var socket : WebSocket?
