@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2FCDF85578B600A9D22372A /* Pods_limp_rxswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C4912338FA7B207D3713CB /* Pods_limp_rxswift.framework */; };
+		CDE6C47623AE01A300B03A53 /* limp_rxswift.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE6C47423AE01A300B03A53 /* limp_rxswift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDE6C48D23AE02BF00B03A53 /* CallArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C47C23AE02BE00B03A53 /* CallArguments.swift */; };
+		CDE6C48E23AE02BF00B03A53 /* ExtensionLimp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C47D23AE02BE00B03A53 /* ExtensionLimp.swift */; };
+		CDE6C48F23AE02BF00B03A53 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C47E23AE02BE00B03A53 /* AnyCodable.swift */; };
+		CDE6C49023AE02BF00B03A53 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C47F23AE02BE00B03A53 /* HMAC.swift */; };
+		CDE6C49123AE02BF00B03A53 /* BlueHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48023AE02BE00B03A53 /* BlueHMAC.swift */; };
+		CDE6C49223AE02BF00B03A53 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48123AE02BE00B03A53 /* Reachability.swift */; };
+		CDE6C49323AE02BF00B03A53 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48223AE02BE00B03A53 /* WebSocket.swift */; };
+		CDE6C49423AE02BF00B03A53 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48323AE02BE00B03A53 /* Updatable.swift */; };
+		CDE6C49523AE02BF00B03A53 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48423AE02BE00B03A53 /* JWT.swift */; };
+		CDE6C49623AE02BF00B03A53 /* JWTSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48523AE02BF00B03A53 /* JWTSigner.swift */; };
+		CDE6C49723AE02BF00B03A53 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48623AE02BF00B03A53 /* Header.swift */; };
+		CDE6C49823AE02BF00B03A53 /* Limp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48723AE02BF00B03A53 /* Limp.swift */; };
+		CDE6C49923AE02BF00B03A53 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48823AE02BF00B03A53 /* SSLSecurity.swift */; };
+		CDE6C49A23AE02BF00B03A53 /* LimpFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48923AE02BF00B03A53 /* LimpFile.swift */; };
+		CDE6C49B23AE02BF00B03A53 /* SignerAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48A23AE02BF00B03A53 /* SignerAlgorithm.swift */; };
+		CDE6C49C23AE02BF00B03A53 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48B23AE02BF00B03A53 /* Status.swift */; };
+		CDE6C49D23AE02BF00B03A53 /* JWTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE6C48C23AE02BF00B03A53 /* JWTError.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06C4912338FA7B207D3713CB /* Pods_limp_rxswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_limp_rxswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DD739908DACAF2BD32AF326 /* Pods-limp-rxswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-limp-rxswift.release.xcconfig"; path = "Target Support Files/Pods-limp-rxswift/Pods-limp-rxswift.release.xcconfig"; sourceTree = "<group>"; };
+		CDE6C47123AE01A300B03A53 /* limp_rxswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = limp_rxswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE6C47423AE01A300B03A53 /* limp_rxswift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = limp_rxswift.h; sourceTree = "<group>"; };
+		CDE6C47523AE01A300B03A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE6C47C23AE02BE00B03A53 /* CallArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallArguments.swift; sourceTree = "<group>"; };
+		CDE6C47D23AE02BE00B03A53 /* ExtensionLimp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionLimp.swift; sourceTree = "<group>"; };
+		CDE6C47E23AE02BE00B03A53 /* AnyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
+		CDE6C47F23AE02BE00B03A53 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		CDE6C48023AE02BE00B03A53 /* BlueHMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueHMAC.swift; sourceTree = "<group>"; };
+		CDE6C48123AE02BE00B03A53 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		CDE6C48223AE02BE00B03A53 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		CDE6C48323AE02BE00B03A53 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		CDE6C48423AE02BE00B03A53 /* JWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
+		CDE6C48523AE02BF00B03A53 /* JWTSigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTSigner.swift; sourceTree = "<group>"; };
+		CDE6C48623AE02BF00B03A53 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		CDE6C48723AE02BF00B03A53 /* Limp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limp.swift; sourceTree = "<group>"; };
+		CDE6C48823AE02BF00B03A53 /* SSLSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLSecurity.swift; sourceTree = "<group>"; };
+		CDE6C48923AE02BF00B03A53 /* LimpFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimpFile.swift; sourceTree = "<group>"; };
+		CDE6C48A23AE02BF00B03A53 /* SignerAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignerAlgorithm.swift; sourceTree = "<group>"; };
+		CDE6C48B23AE02BF00B03A53 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		CDE6C48C23AE02BF00B03A53 /* JWTError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTError.swift; sourceTree = "<group>"; };
+		E26AEAEA5E4F9011F5A228D2 /* Pods-limp-rxswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-limp-rxswift.debug.xcconfig"; path = "Target Support Files/Pods-limp-rxswift/Pods-limp-rxswift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDE6C46E23AE01A300B03A53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FCDF85578B600A9D22372A /* Pods_limp_rxswift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E3564DDD733B8EED55C2794 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E26AEAEA5E4F9011F5A228D2 /* Pods-limp-rxswift.debug.xcconfig */,
+				0DD739908DACAF2BD32AF326 /* Pods-limp-rxswift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CDE6C46723AE01A300B03A53 = {
+			isa = PBXGroup;
+			children = (
+				CDE6C47323AE01A300B03A53 /* limp-rxswift */,
+				CDE6C47223AE01A300B03A53 /* Products */,
+				1E3564DDD733B8EED55C2794 /* Pods */,
+				D46644BBD748007CB6A582C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CDE6C47223AE01A300B03A53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDE6C47123AE01A300B03A53 /* limp_rxswift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDE6C47323AE01A300B03A53 /* limp-rxswift */ = {
+			isa = PBXGroup;
+			children = (
+				CDE6C47423AE01A300B03A53 /* limp_rxswift.h */,
+				CDE6C47523AE01A300B03A53 /* Info.plist */,
+				CDE6C47E23AE02BE00B03A53 /* AnyCodable.swift */,
+				CDE6C48023AE02BE00B03A53 /* BlueHMAC.swift */,
+				CDE6C47C23AE02BE00B03A53 /* CallArguments.swift */,
+				CDE6C47D23AE02BE00B03A53 /* ExtensionLimp.swift */,
+				CDE6C48623AE02BF00B03A53 /* Header.swift */,
+				CDE6C47F23AE02BE00B03A53 /* HMAC.swift */,
+				CDE6C48423AE02BE00B03A53 /* JWT.swift */,
+				CDE6C48C23AE02BF00B03A53 /* JWTError.swift */,
+				CDE6C48523AE02BF00B03A53 /* JWTSigner.swift */,
+				CDE6C48723AE02BF00B03A53 /* Limp.swift */,
+				CDE6C48923AE02BF00B03A53 /* LimpFile.swift */,
+				CDE6C48123AE02BE00B03A53 /* Reachability.swift */,
+				CDE6C48A23AE02BF00B03A53 /* SignerAlgorithm.swift */,
+				CDE6C48823AE02BF00B03A53 /* SSLSecurity.swift */,
+				CDE6C48B23AE02BF00B03A53 /* Status.swift */,
+				CDE6C48323AE02BE00B03A53 /* Updatable.swift */,
+				CDE6C48223AE02BE00B03A53 /* WebSocket.swift */,
+			);
+			path = "limp-rxswift";
+			sourceTree = "<group>";
+		};
+		D46644BBD748007CB6A582C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06C4912338FA7B207D3713CB /* Pods_limp_rxswift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CDE6C46C23AE01A300B03A53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE6C47623AE01A300B03A53 /* limp_rxswift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CDE6C47023AE01A300B03A53 /* limp-rxswift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDE6C47923AE01A300B03A53 /* Build configuration list for PBXNativeTarget "limp-rxswift" */;
+			buildPhases = (
+				48B265C7D15CAF41D1EEBC1D /* [CP] Check Pods Manifest.lock */,
+				CDE6C46C23AE01A300B03A53 /* Headers */,
+				CDE6C46D23AE01A300B03A53 /* Sources */,
+				CDE6C46E23AE01A300B03A53 /* Frameworks */,
+				CDE6C46F23AE01A300B03A53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "limp-rxswift";
+			productName = "limp-rxswift";
+			productReference = CDE6C47123AE01A300B03A53 /* limp_rxswift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDE6C46823AE01A300B03A53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Usman Mughal";
+				TargetAttributes = {
+					CDE6C47023AE01A300B03A53 = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = CDE6C46B23AE01A300B03A53 /* Build configuration list for PBXProject "limp-rxswift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDE6C46723AE01A300B03A53;
+			productRefGroup = CDE6C47223AE01A300B03A53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDE6C47023AE01A300B03A53 /* limp-rxswift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDE6C46F23AE01A300B03A53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48B265C7D15CAF41D1EEBC1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-limp-rxswift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDE6C46D23AE01A300B03A53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE6C48D23AE02BF00B03A53 /* CallArguments.swift in Sources */,
+				CDE6C48E23AE02BF00B03A53 /* ExtensionLimp.swift in Sources */,
+				CDE6C49B23AE02BF00B03A53 /* SignerAlgorithm.swift in Sources */,
+				CDE6C49523AE02BF00B03A53 /* JWT.swift in Sources */,
+				CDE6C49823AE02BF00B03A53 /* Limp.swift in Sources */,
+				CDE6C49223AE02BF00B03A53 /* Reachability.swift in Sources */,
+				CDE6C49D23AE02BF00B03A53 /* JWTError.swift in Sources */,
+				CDE6C49023AE02BF00B03A53 /* HMAC.swift in Sources */,
+				CDE6C49723AE02BF00B03A53 /* Header.swift in Sources */,
+				CDE6C49423AE02BF00B03A53 /* Updatable.swift in Sources */,
+				CDE6C49123AE02BF00B03A53 /* BlueHMAC.swift in Sources */,
+				CDE6C48F23AE02BF00B03A53 /* AnyCodable.swift in Sources */,
+				CDE6C49C23AE02BF00B03A53 /* Status.swift in Sources */,
+				CDE6C49923AE02BF00B03A53 /* SSLSecurity.swift in Sources */,
+				CDE6C49323AE02BF00B03A53 /* WebSocket.swift in Sources */,
+				CDE6C49623AE02BF00B03A53 /* JWTSigner.swift in Sources */,
+				CDE6C49A23AE02BF00B03A53 /* LimpFile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CDE6C47723AE01A300B03A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDE6C47823AE01A300B03A53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CDE6C47A23AE01A300B03A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26AEAEA5E4F9011F5A228D2 /* Pods-limp-rxswift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 57Y2LWUK86;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "limp-rxswift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobizion.limp-rxswift";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDE6C47B23AE01A300B03A53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD739908DACAF2BD32AF326 /* Pods-limp-rxswift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 57Y2LWUK86;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "limp-rxswift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobizion.limp-rxswift";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDE6C46B23AE01A300B03A53 /* Build configuration list for PBXProject "limp-rxswift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE6C47723AE01A300B03A53 /* Debug */,
+				CDE6C47823AE01A300B03A53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDE6C47923AE01A300B03A53 /* Build configuration list for PBXNativeTarget "limp-rxswift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE6C47A23AE01A300B03A53 /* Debug */,
+				CDE6C47B23AE01A300B03A53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDE6C46823AE01A300B03A53 /* Project object */;
+}
