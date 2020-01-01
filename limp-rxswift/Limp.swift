@@ -49,8 +49,8 @@ public protocol LimpDelegate: class {
 
 public class SDKConfig {
     public static var nonToken = "__ANON_TOKEN_f00000000000000000000012"
-    public static var API_URL = "wss://limp-sample-app.azurewebsites.net/ws"
-    public static var authHashLevel = 5.6
+    public static var API_URL = "wss://map-api-dev.azurewebsites.net/ws"
+    public static var authHashLevel = 5.0
     public static var authAttrs: [String]?
     
     public init() {
@@ -517,7 +517,7 @@ open class Limp: NSObject {
         }
     }
     
-    func generateAuthHash(authVar: CredentialType, authVal: String, password: String) throws -> String {
+   public func generateAuthHash(authVar: CredentialType, authVal: String, password: String) throws -> String {
         
         var hashObj = [authVar.rawValue, authVal, password];
         if SDKConfig.authHashLevel == 5.6 {
