@@ -216,8 +216,7 @@ open class Limp: NSObject {
                                                  query: nil)
                     self.call(callArgs: callargs) { (observer) in
                         observer.asObservable().subscribe(onNext: { (success , response) in
-                            print(success)
-                            print(response)
+                            print("heartbeat received.")
                         }, onError: { error in
                             print(error)
                         }, onCompleted: {
@@ -428,29 +427,36 @@ open class Limp: NSObject {
             */
             
             setListener { observer in
-                observer.asObservable().subscribe(onNext: { (success , response) in
+                observer.asObservable().subscribe(onNext: { (success , socketResponse) in
                     
-                    if ((response.args != nil) && response.args?.call_id == callArgs.call_id) {
+                    if ((socketResponse.args != nil) && socketResponse.args?.call_id == callArgs.call_id) {
                         if let _id = callArgs.call_id {
                             print("message received from observer on call_id:" , _id)
                         }
-                        if (response.status == 200) {
+                        if (socketResponse.status == 200) {
                             observer.subscribe(onNext: { (success , response) in
                             }).disposed(by: self.disposeBag)
                         }
-                        if ((response.args?.watch) != nil) {
-                            if let _id = response.args?.call_id{
+                        if ((socketResponse.args?.watch) != nil) {
+                            if let _id = socketResponse.args?.call_id{
                                 print("completing the observer with call_id:",_id)
                             }
                         } else {
-                            if let _id = response.args?.call_id{
+                            if let _id = socketResponse.args?.call_id{
                                 print("Detected watch with call_id:",_id)
                             }
                         }
                     }
                     
-                    let success = Observable.just(success)
-                    let response = Observable.just(response)
+//                    let success = Observable.just(success)
+//                    let response = Observable.just(response)
+//                    let result = Observable.combineLatest(success,response)
+//                    completion(result)
+                    var success = Observable.just(success)
+                    let response = Observable.just(socketResponse)
+                    if socketResponse.msg == "Heartbeat received."{
+                        success = Observable.just(false)
+                    }
                     let result = Observable.combineLatest(success,response)
                     completion(result)
                     
